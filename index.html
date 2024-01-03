@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--header/navbar-->
+    <header>
+        <section class="header-text">
+            <h1 id="web-title">TRIANGLE CALCULATOR</h1>
+            <p id="web-subtitle">Triangle calculation is now online</p>
+        </section>    
+        
+        <nav id="nav-bar">
+            <a href="#area-section">Luas segitiga</a>
+            <a href="#circumference-section">Keliling segitiga</a>
+            <a href="#about-section" class="split">About</a>
+        </nav>
+    </header>
+
+    <!--content-->
+    <main class="tabcontent" id="area-section">
+        <h2> Hitung Luas Segitiga</h2>
+        <img src="https://3.bp.blogspot.com/-4uwtS9u5LoQ/XA36BksDqtI/AAAAAAAAPo4/03J6fohFhSErcfsbVd0GxB8Z5A58bAU3gCLcBGAs/s1600/Rumus%2BLuas%2BSegitiga.png" alt="Rumus luas segitiga">
+
+        <label for="input-height" id="label-height">Tinggi</label>
+        <input type="number" class="calc-input" id="input-tinggi" placeholder="Masukkan tinggi segitiga" required>
+        <p id="validate-tinggi" class="data-validation"></p>
+        
+        <label for="input-alas" id="label-alas">Alas</label>
+        <input type="number" class="calc-input" id="input-alas" placeholder="Masukkan alas segitiga" required>
+        <p id="validate-alas" class="data-validation"></p>
+
+        <p id="luas-result"></p>
+        
+        <div class="buttons">
+            <button onclick="calculateArea()" id="calc-luas">Hitung</button>
+            <button class="red-button" onclick="resetInputLuas()" id="reset-luas">Reset</button>
+        </div>
+    </main>
+
+    <main class="tabcontent" id="circumference-section">
+        <h2>Hitung Keliling Segitiga</h2>
+        <img src="https://2.bp.blogspot.com/-WZniDLhkvCI/XA358hjJBzI/AAAAAAAAPo0/BhWHYOfU2sogl_phnu-o09rBuWEkuif1wCLcBGAs/s1600/Rumus%2BKeliling%2BSegitiga.png" alt="Rumus keliling segitiga">
+
+        <label for="input-side1" id="label-side1">Sisi 1</label>
+        <input type="number" class="calc-input" id="input-side1" placeholder="Masukkan panjang sisi segitiga" required>
+        <p id="validate-side1" class="data-validation"></p>
+
+        <label for="input-side2" id="label-side2">Sisi 2</label>
+        <input type="number" class="calc-input" id="input-side2" placeholder="Masukkan panjang sisi segitiga" required>
+        <p id="validate-side2" class="data-validation"></p>
+
+        <label for="input-side3" id="label-side3">Sisi 3</label>
+        <input type="number" class="calc-input" id="input-side3" placeholder="Masukkan panjang sisi segitiga" required>
+        <p id="validate-side3" class="data-validation"></p>
+
+        <p id="keliling-result"></p>
+        
+        <div class="buttons">
+            <button onclick="calculateCircumference()" id="calc-keliling">Hitung</button>
+            <button class="red-button" onclick="resetInputKeliling()" id="reset-keliling">Reset</button>
+        </div>
+    </main>
+
+    <!--footer-->
+    <footer id="about-section">
+        <p>This is footer section</p>
+    </footer>
+
+    <!--Javascript-->
+    <script src="js/script.js"></script>
+</body>
+</html>
